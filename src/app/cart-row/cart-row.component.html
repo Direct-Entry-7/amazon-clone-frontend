@@ -1,0 +1,7 @@
+<img class="item-image" src="{{item.image}}" alt="cart item image">
+<div class="item-title">{{item.title}}</div>
+<div class="item-unit-price">{{item.price|currency:'USD'}}</div>
+<div class="item-qty">{{qty}}</div>
+<div class="item-total-price">{{(item.price * qty) |currency:'USD'}}</div>
+<div class="remove" (click)="removeFromCart()">❌</div>
+

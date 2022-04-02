@@ -1,0 +1,8 @@
+<app-cart-item *ngFor="let it of items" [item]="it"></app-cart-item>
+<div class="loader-container" *ngIf="items.length === 0 && !onError" >
+  <div class="lds-ripple"><div></div><div></div></div>
+</div>
+<div class="on-error-container" *ngIf="onError">
+  <h2>Failed to load the data from the server</h2>
+  <p>Would you like to <a href="#" (click)="loadAllItems()">retry</a>?</p>
+</div>

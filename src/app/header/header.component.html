@@ -1,0 +1,23 @@
+<ng-progress></ng-progress>
+<header>
+  <div class="logo-container">
+    <div routerLink="/home" class="logo"></div>
+  </div>
+  <div class="options-wrapper">
+    <div class="user-container">
+      <small>Hello, Sign in</small><br>
+      <b>Account & Lists <span></span></b>
+      <div class="sign-container">
+          <div class="nav-arrow"></div>
+          <button routerLink="/sign-in">Sign in</button>
+          <div>New Customer? <a href="#" routerLink="/sign-up">Start here.</a></div>
+      </div>
+    </div>
+    <div class="cart-container" routerLink="/cart">
+      <div class="cart-icon">
+        <span>{{totalItemsInCart}}</span>
+      </div>
+      <small>Cart</small>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,20 @@
+<div class="cart-item" (click)="navigateToItem()">
+  <img class="item-image" src="{{item.image}}">
+  <p class="item-description">{{item.title}}</p>
+  <ng-container [ngSwitch]="item.rating">
+    <div *ngSwitchCase="5">⭐⭐⭐⭐⭐</div>
+    <div *ngSwitchCase="4">⭐⭐⭐⭐</div>
+    <div *ngSwitchCase="3">⭐⭐⭐</div>
+    <div *ngSwitchCase="2">⭐⭐</div>
+    <div *ngSwitchCase="1">⭐</div>
+  </ng-container>
+  <div class="item-price">{{item.price | currency:'USD'}}</div>
+  <div *ngIf="inCart !== item.qty" class="item-stock">In Stock: <span>{{item.qty - inCart}}</span></div>
+  <div *ngIf="inCart === item.qty" class="out-of-stock">Out of Stock</div>
+  Add to Cart
+  <div class="input-group mb-3 add-to-cart-ctrl" (click)="$event.stopImmediatePropagation()">
+    <button [disabled]="inCart === 0" class="btn btn-outline-secondary" type="button" (click)="updateCart(false)">-</button>
+    <input type="text" class="form-control" [(ngModel)]="inCart" [disabled]="true">
+    <button [disabled]="inCart === item.qty" class="btn btn-outline-secondary" type="button" (click)="updateCart(true)">+</button>
+  </div>
+</div>

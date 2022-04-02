@@ -1,0 +1,61 @@
+.item-container{
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+
+  &>div{
+    padding: 10px;
+  }
+
+  .item-image{
+    width: 300px;
+    object-fit: contain;
+  }
+
+  .item-title{
+    font-size: 1.5rem;
+  }
+
+  .item-rating{
+    padding: 10px 0;
+  }
+
+  .item-price{
+    padding: 10px 0;
+
+    span{
+      font-size: 2rem;
+      vertical-align: sub;
+      color: #B12704;
+    }
+  }
+
+  .item-stock{
+    color: gray;
+    margin-bottom: 10px;
+  }
+
+  .out-of-stock{
+    width: 150px;
+    text-align: center;
+    background-color: red;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .add-to-cart-ctrl{
+    width: 120px;
+    margin-top: 10px;
+
+    input{
+      text-align: center;
+    }
+  }
+}
+
+.item-description{
+  padding: 10px;
+}
+
